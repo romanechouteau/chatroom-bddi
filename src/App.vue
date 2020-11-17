@@ -1,32 +1,47 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view />
+    <img src="./assets/logo.svg" alt="Logo" class="logo">
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  font-family: 'Changa', sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-#nav {
-  padding: 30px;
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('assets/background.svg');
+  background-size: cover;
+  background-position: center;
+
+  .logo {
+    height: 44px;
+    position: fixed;
+    top: 16px;
+    left: 16px;
   }
 }
 </style>
